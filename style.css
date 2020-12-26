@@ -1,0 +1,141 @@
+@font-face {
+    font-family: Exo2;
+    src: url("./fonts/Exo2.0-Thin.otf") format("openType");
+    font-weight: 100
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgb(47, 47, 47);
+}
+img {
+    margin-left: -80px;
+    margin-bottom: -80px;
+    max-width: 370px;
+}
+a {
+    color: #1698d9;
+    text-decoration-style: dashed;
+}
+.wrapper {
+    margin-top: 120px;
+    padding: 50px 50px;
+    background: url(./img/Pattern.png);
+    box-shadow: inset 0 0 2000px black;
+}
+.wrapper > h1 {
+    color: rgb(255, 255, 255);
+    font-family: Exo2,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    max-width: 500px;
+    min-width: 280px;    
+    margin: 0 20px;
+}
+.card {
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    background: #1698d9;
+}
+.card-content {
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
+    background: #fff;
+    overflow: hidden;
+    padding: 20px 45px;
+    height: 430px;
+    border-radius: 10px;
+    position: relative;
+}
+.card-content > h1 {
+    font-size: 48px;
+}
+.card-content > h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.description {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: rgba(102, 102, 102, 0.7);
+}
+.promotions {
+    display: block;
+    max-width: 150px;
+    color: rgba(102, 102, 102, 0.7);
+    font-size: 14px;
+}
+.weight {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    bottom: 10px;
+    font-size: 21px;
+    text-align: center;
+    color: #fff;
+    line-height: 10px;
+    background: #1698d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 21px;
+}
+.weight span:first-child {
+    font-size: 42px;
+    line-height: 120%;
+}
+.signature {
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+/* Styles for themes */
+.red-theme .card {
+    background: #d91667;
+}
+.red-theme .weight {
+    background: #d91667;
+}
+.inactive .card {
+    background: #000;
+}
+.inactive .weight {
+    background: #000;
+}
+.inactive .card:before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #f3f3f3;
+    opacity: 0.7;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 3;
+}
+.inactive-text {
+    color: #ffff66;
+}
